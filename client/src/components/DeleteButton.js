@@ -5,7 +5,7 @@ function DeleteButton({id}) {
     const onDelete = async (id) => {
         try {
             const response = await fetch(
-                `http://localhost:5035/${id}`, { method: "DELETE"}
+                `http://localhost:5035/goals/${id}`, { method: "DELETE"}
             )   
             console.log("We deleted")
             window.location = "/";

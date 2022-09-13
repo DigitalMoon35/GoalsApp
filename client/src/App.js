@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import GoalInput from './components/GoalInput';
 import GoalList from './components/GoalList';
@@ -8,15 +8,14 @@ import GoalList from './components/GoalList';
 // we will set state 
 
 function App() {
+  const [open, setOpen] = useState(false)
   return (
     <div className="goal-container">
       <header>
         <h1>My Goals</h1>
       </header>
       <GoalInput/>
-      <section>
       <GoalList/>
-      </section>
     </div>
   );
 }

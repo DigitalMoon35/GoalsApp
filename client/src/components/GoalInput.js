@@ -8,16 +8,22 @@ function GoalInput(props) {
 
         const body = {description};
 
-        const response = await fetch(
-            "http://localhost:5035/goals",
-            {
-                method: "POST",
-                headers: {
-                    "Content-type": "application/json"
-                },
-                body: JSON.stringify(body)
-            }
-        )
+        try {
+            const response = await fetch(
+                "http://localhost:5035/goals",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(body)
+                }
+            )
+            window.location = "/";
+        } catch (error) {
+            console.error(error.message);  
+        }
+
     }
     
     return (

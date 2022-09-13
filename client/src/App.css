@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
   max-width: 800px;
-  background-color: hsl(0, 14%, 27%);
+  background-color: hsl(0, 14%, 27%)
 }
 
 .goal-container {
@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 #input-sect {
@@ -40,4 +41,8 @@ ul {
   align-items: center;
   justify-content: center;
   list-style-type: none;
+}
+
+.overlay {
+
 }

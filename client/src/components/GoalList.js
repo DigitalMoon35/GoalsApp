@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import GoalItem from './GoalItem';
 
-function GoalList(props) {
+function GoalList({onClickEdit}) {
     // we will fetch all of the goals
     // pass each goal down to Goal item (using map)
     const [goals, setGoals] = useState([]);
@@ -24,7 +24,7 @@ const getGoals = async () => {
         <>
         <ul>
             {goals.map(goal => {
-                return <GoalItem goal={goal}/>
+                return <GoalItem goal={goal} onClickEdit={onClickEdit}/>
             })}
         </ul>
         </>

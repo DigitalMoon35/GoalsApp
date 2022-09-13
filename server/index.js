@@ -66,7 +66,7 @@ app.put("/goals/:id", async (req, res) => {
     try {
         const { description } = req.body;
         const { id } =  req.params;
-    
+        console.log(req.body)
         const goal = await pool.query(
             "UPDATE goals SET description = $1 WHERE id = $2", [JSON.stringify(description), id]
         );
